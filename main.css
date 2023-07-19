@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Cormorant Garamond", sans-serif;
   background-color: #181816;
   color: #a6a5a5;
 }
@@ -21,9 +20,9 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Cormorant Upright", sans-serif;
 }
 .nav .nav__logo {
-  font-family: "Cormorant Upright", sans-serif;
   font-size: 25px;
   opacity: 100%;
 }
@@ -33,6 +32,7 @@ ul {
 
 .header {
   padding: 40px;
+  font-family: "Cormorant Garamond", sans-serif;
 }
 .header .header__header {
   font-size: 30px;
@@ -40,17 +40,61 @@ ul {
   margin-bottom: 20px;
 }
 .header .header__paragraph {
-  display: flex;
-  justify-content: flex-start;
   font-size: 1.2rem;
 }
 
 .portfolio {
   padding: 40px;
+  font-family: "Cormorant Garamond", sans-serif;
 }
 .portfolio .portfolio__header {
   margin-bottom: 40px;
   font-size: 25px;
+}
+.portfolio .portfolio__main {
+  font-family: "Cormorant Upright", sans-serif;
+  display: grid;
+}
+.portfolio .portfolio__project-4,
+.portfolio .portfolio__project-5,
+.portfolio .portfolio__project-6 {
+  display: none;
+}
+
+.contact {
+  font-family: "Cormorant Garamond", sans-serif;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact .contact__header {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.contact .contact__button {
+  padding: 5px 25px;
+  border-radius: 3px;
+  font-family: "Cormorant Upright", sans-serif;
+  font-size: 1.2rem;
+  border: 0.3px solid #655946;
+}
+.contact .contact__button:hover {
+  background-color: #a6a5a5;
+  color: #655946;
+}
+.contact .contact__button:active {
+  background-color: #513c31;
+  color: #a6a5a5;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #513c31;
+  height: 5vh;
 }
 
 .half-box {
@@ -58,6 +102,7 @@ ul {
   border-bottom: 2px solid #655946;
   box-shadow: 0 1px #a6a5a5;
   border-radius: 4px;
+  color: #655946;
 }
 
 .primary-underline {

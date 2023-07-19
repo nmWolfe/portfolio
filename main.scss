@@ -7,9 +7,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: $secondary-font;
 
     .nav__logo {
-        font-family: $secondary-font;
         font-size: $secondary-font-size;
         opacity: 100%;
     }
@@ -22,6 +22,7 @@
 .header {
 
     padding: 40px;
+    font-family: $primary-font;
 
     .header__header {
         font-size: $primary-font-size;
@@ -30,20 +31,71 @@
     }
 
     .header__paragraph {
-        display: flex;
-        justify-content: flex-start;
         font-size: 1.2rem;
     }
 
 }
 
 .portfolio {
+
     padding: 40px;
+    font-family: $primary-font;
 
     .portfolio__header {
         margin-bottom: 40px;
         font-size: $secondary-font-size;
     }
+
+    .portfolio__main {
+        font-family: $secondary-font;
+        display: grid;
+    }
+
+    .portfolio__project-4,
+    .portfolio__project-5,
+    .portfolio__project-6 {
+        display: none;
+    }
+}
+
+.contact {
+    font-family: $primary-font;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact__header {
+        font-size: $primary-font-size;
+        margin-bottom: 30px;
+    }
+
+    .contact__button {
+        padding: 5px 25px;
+        border-radius: 3px;
+        font-family: $secondary-font;
+        font-size: 1.2rem;
+        border: .3px solid $tertiary-color;
+
+        &:hover {
+            background-color: $accent-color;
+            color: $tertiary-color;
+        }
+
+        &:active {
+            background-color: $secondary-color;
+            color: $accent-color;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $secondary-color;
+    height: 5vh;
 }
 
 
@@ -54,6 +106,7 @@
     border-bottom: 2px solid $tertiary-color;
     box-shadow: 0 1px $accent-color;
     border-radius: 4px;
+    color: $tertiary-color;
 }
 
 .primary-underline {
