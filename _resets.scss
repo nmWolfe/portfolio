@@ -1,0 +1,14 @@
+@use "./variables" as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $primary-font;
+    background-color: $primary-color;
+    color: $accent-color;
+}
+
+a {
+    text-decoration: none;
+}
