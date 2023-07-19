@@ -10,4 +10,53 @@
 
 a {
   text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  padding: 20px;
+}
+.header .header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header__logo {
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  opacity: 98%;
+}
+.header .header__list {
+  display: inline-flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.intro {
+  padding: 30px;
+}
+.intro .intro__header {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.intro .intro__paragraph {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.half-box {
+  border-left: 2px solid #513c31;
+  border-bottom: 2px solid #513c31;
+  box-shadow: 0 1px #a6a5a5;
+  border-radius: 4px;
+}
+
+.primary-underline {
+  text-decoration: underline;
+  text-decoration-color: #513c31;
 }/*# sourceMappingURL=main.css.map */
