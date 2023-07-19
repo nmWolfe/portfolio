@@ -1,60 +1,93 @@
 @use "./variables" as *;
 @use "./resets" as *;
 
-.header {
+.nav {
 
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    .header__nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .nav__logo {
+        font-family: $secondary-font;
+        font-size: $secondary-font-size;
+        opacity: 100%;
     }
 
-    .header__logo {
-        font-family: $primary-font;
-        font-size: 30px;
-        opacity: 98%;
-    }
-
-    .header__list {
-        display: inline-flex;
-        justify-content: space-between;
-        gap: 15px;
+    .nav__list {
+        display: none;
     }
 }
 
-.intro {
+.header {
 
-    padding: 30px;
+    padding: 40px;
 
-    .intro__header {
-        font-size: 30px;
+    .header__header {
+        font-size: $primary-font-size;
+        text-align: left;
         margin-bottom: 20px;
     }
 
-    .intro__paragraph {
-        padding: 20px;
+    .header__paragraph {
         display: flex;
         justify-content: flex-start;
-        width: 50%;
+        font-size: 1.2rem;
     }
 
 }
 
+.portfolio {
+    padding: 40px;
 
+    .portfolio__header {
+        margin-bottom: 40px;
+        font-size: $secondary-font-size;
+    }
+}
 
 
 // RANDOM STYLING CLASSES
 
 .half-box {
-    border-left: 2px solid $secondary-color;
-    border-bottom: 2px solid $secondary-color;
+    border-left: 2px solid $tertiary-color;
+    border-bottom: 2px solid $tertiary-color;
     box-shadow: 0 1px $accent-color;
     border-radius: 4px;
 }
 
 .primary-underline {
     text-decoration: underline;
-    text-decoration-color: $secondary-color;
+    text-decoration-color: $tertiary-color;
+}
+
+hr {
+    display: flex;
+    border: 2px solid $tertiary-color;
+    border-radius: 5px;
+    box-shadow: 0 1px $accent-color;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+// MEDIA SCREENS
+
+@media screen and (min-width: 768px) {
+    .nav {
+        padding: 20px;
+        justify-content: space-between;
+        align-items: center;
+    
+        .nav__logo {
+            font-family: $primary-font;
+            font-size: 30px;
+            opacity: 98%;
+        }
+    
+        .nav__list {
+            display: inline-flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+    }
 }

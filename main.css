@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&family=Nunito:ital,wght@0,200;0,400;0,700;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Cormorant+Upright&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
+  font-family: "Cormorant Garamond", sans-serif;
   background-color: #181816;
   color: #a6a5a5;
 }
@@ -16,47 +16,78 @@ ul {
   list-style: none;
 }
 
-.header {
+.nav {
   padding: 20px;
-}
-.header .header__nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.header .header__logo {
-  font-family: "Nunito", sans-serif;
-  font-size: 30px;
-  opacity: 98%;
+.nav .nav__logo {
+  font-family: "Cormorant Upright", sans-serif;
+  font-size: 25px;
+  opacity: 100%;
 }
-.header .header__list {
-  display: inline-flex;
-  justify-content: space-between;
-  gap: 15px;
+.nav .nav__list {
+  display: none;
 }
 
-.intro {
-  padding: 30px;
+.header {
+  padding: 40px;
 }
-.intro .intro__header {
+.header .header__header {
   font-size: 30px;
+  text-align: left;
   margin-bottom: 20px;
 }
-.intro .intro__paragraph {
-  padding: 20px;
+.header .header__paragraph {
   display: flex;
   justify-content: flex-start;
-  width: 50%;
+  font-size: 1.2rem;
+}
+
+.portfolio {
+  padding: 40px;
+}
+.portfolio .portfolio__header {
+  margin-bottom: 40px;
+  font-size: 25px;
 }
 
 .half-box {
-  border-left: 2px solid #513c31;
-  border-bottom: 2px solid #513c31;
+  border-left: 2px solid #655946;
+  border-bottom: 2px solid #655946;
   box-shadow: 0 1px #a6a5a5;
   border-radius: 4px;
 }
 
 .primary-underline {
   text-decoration: underline;
-  text-decoration-color: #513c31;
+  text-decoration-color: #655946;
+}
+
+hr {
+  display: flex;
+  border: 2px solid #655946;
+  border-radius: 5px;
+  box-shadow: 0 1px #a6a5a5;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav .nav__logo {
+    font-family: "Cormorant Garamond", sans-serif;
+    font-size: 30px;
+    opacity: 98%;
+  }
+  .nav .nav__list {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
 }/*# sourceMappingURL=main.css.map */
