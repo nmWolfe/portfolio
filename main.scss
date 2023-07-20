@@ -198,12 +198,15 @@
     margin: 5px 0 0 0 ;
 }
 
+// COLLAPSIBLE MENU STYLING
+
 .collapsible {
     font-family: $primary-font;
     border: none;
     border-bottom: 1px solid $secondary-color;
     width: 100%;
     text-align: left;
+    display: block;
 
     &:hover {
         cursor: pointer;
@@ -215,6 +218,12 @@
         font-size: 8px;
         float: right;
     }
+
+}
+
+.collapsible__content {
+    display: none;
+    overflow: hidden;
 }
 
 // MEDIA SCREENS

@@ -188,6 +188,7 @@ ul {
   border-bottom: 1px solid #513c31;
   width: 100%;
   text-align: left;
+  display: block;
 }
 .collapsible:hover {
   cursor: pointer;
@@ -197,6 +198,11 @@ ul {
   color: #655946;
   font-size: 8px;
   float: right;
+}
+
+.collapsible__content {
+  display: none;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
