@@ -21,9 +21,6 @@
 
 .header {
 
-    padding: 40px;
-    font-family: $primary-font;
-
     .header__header {
         font-size: $primary-font-size;
         text-align: left;
@@ -32,14 +29,13 @@
 
     .header__paragraph {
         font-size: 1.2rem;
+        margin-bottom: 40px;
     }
 
 }
 
 .portfolio {
-
-    padding: 40px;
-    font-family: $primary-font;
+    margin: 40px 0 40px 0;
 
     .portfolio__header {
         margin-bottom: 40px;
@@ -53,16 +49,58 @@
 
     // USE NTH CHILD FOR PORTFOLIO ITEMS
 
-    .portfolio__project-4,
-    .portfolio__project-5,
-    .portfolio__project-6 {
+    .portfolio__project:nth-child(4),
+    .portfolio__project:nth-child(5),
+    .portfolio__project:nth-child(6) {
         display: none;
     }
 }
 
+.about {
+
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "img"
+    "paragraph"
+    "experience"
+    "interests";
+
+    .about__header {
+        font-size: $secondary-font-size;
+        grid-area: header;
+    }
+
+    .about__paragraph {
+        grid-area: paragraph;
+    }
+
+    .about__img {
+        grid-area: img;
+        margin: 20px 0 20px 0;
+
+        .about__img--size {
+            object-fit: cover;
+            width: 100%;
+            border-radius: 1% 5%;
+        }
+    }
+
+    .about__experience {
+        margin-top: 20px;
+        grid-area: experience;
+        font-family: $secondary-font;
+    }
+
+    .about__interests {
+        margin-top: 20px;
+        grid-area: interests;
+        font-family: $secondary-font;
+    }
+
+}
+
 .contact {
-    font-family: $primary-font;
-    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,7 +108,7 @@
 
     .contact__header {
         font-size: $primary-font-size;
-        margin-bottom: 30px;
+        margin: 30px 0 30px 0;
     }
 
     .contact__button {
@@ -125,7 +163,7 @@
 .half-box {
     border-left: 2px solid $tertiary-color;
     border-bottom: 2px solid $tertiary-color;
-    box-shadow: 0 1px $accent-color;
+    box-shadow: 0 0 $accent-color;
     border-radius: 4px;
     color: $tertiary-color;
 }
@@ -135,13 +173,48 @@
     text-decoration-color: $tertiary-color;
 }
 
-hr {
+.flex-hr {
     display: flex;
-    border: 2px solid $tertiary-color;
+    border: 1px solid $tertiary-color;
     border-radius: 5px;
     box-shadow: 0 1px $accent-color;
     width: 30%;
     margin-bottom: 20px;
+}
+
+.large-hr {
+    border: 1px solid $tertiary-color;
+    border-radius: 5px;
+    box-shadow: 0 1px $accent-color;
+    width: 50px;
+    margin: 20px 0 20px 0;
+}
+
+.small-hr {
+    border: 1px solid $tertiary-color;
+    border-radius: 5px;
+    box-shadow: 0 1px $accent-color;
+    width: 20px;
+    margin: 5px 0 0 0 ;
+}
+
+.collapsible {
+    font-family: $primary-font;
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+    width: 100%;
+    text-align: left;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        content: '\02795';
+        color: $tertiary-color;
+        font-size: 8px;
+        float: right;
+    }
 }
 
 // MEDIA SCREENS
@@ -153,7 +226,7 @@ hr {
         align-items: center;
     
         .nav__logo {
-            font-family: $primary-font;
+            font-family: $secondary-font;
             font-size: 30px;
             opacity: 98%;
         }
@@ -164,4 +237,15 @@ hr {
             gap: 15px;
         }
     }
+
+    .header {        
+        
+        .header__header {
+            font-size: 2rem;
+        }
+        .header__paragraph {
+            width: 40%;
+        }
+    }
+
 }
