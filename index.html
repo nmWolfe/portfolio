@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <title>Nicholas Phelan</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -16,6 +16,7 @@
         ><span class="primary-underline">helan</span>
       </a>
       <ul class="nav__list">
+        <!-- Fade in a background maybe? -->
         <li><a href="#" class="nav__link">About</a></li>
         <li><a href="#" class="nav__link">Portfolio</a></li>
         <li><a href="#" class="nav__link">Contact</a></li>
@@ -32,7 +33,7 @@
             <span class="half-box">D</span>eveloper
           </h1>
         </div>
-        <hr />
+        <hr class="flex-hr" />
         <div class="header__paragraph">
           <p>
             Armed with a sharp intellect and powerful wit, the tech virtuoso
@@ -106,37 +107,50 @@
         </div>
       </section>
       <!-- ABOUT SECTION -->
-      <section>
-        <!-- Think block - flex - make this sexy -->
-        <div>
-          <div>
-            <h2>About P_</h2>
-          </div>
-          <div>
-            <p>
-              About me Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Consequatur fugiat deserunt perspiciatis, eum perferendis quia
-              veniam sint odio sunt laboriosam? Blanditiis ratione nam eveniet
-              aliquid distinctio voluptas at nulla asperiores quas? Deleniti
-              voluptatum cumque nobis, labore esse expedita, nisi possimus
-              pariatur, vel magnam doloremque autem officiis veniam. Numquam,
-              corporis quibusdam!
-            </p>
-          </div>
-          <div>
-            <img src="#" alt="" />
-            <!-- Need a sexy picture of me here -->
-          </div>
+      <section class="about">
+        <div class="about__header">
+          <h2><span class="half-box">A</span>bout Me</h2>
+          <hr class="large-hr" />
         </div>
-        <div>
-          <div>
-            <h3>Experience</h3>
-            <!-- Make some dropdowns here - go hard -->
-          </div>
-          <div>
-            <h3>Interests</h3>
-            <!-- Make some dropdowns here - or go home -->
-          </div>
+        <div class="about__paragraph">
+          <p>
+            Behold the relentless force of a junior software developer who
+            epitomizes the term "badass" in every line of code – a complete
+            legend, unmatched in skill and daring. With an unyielding passion
+            for innovation and a tenacity that knows no bounds, this coding
+            virtuoso fearlessly takes on the most challenging projects, emerging
+            victorious every single time. <br />
+            Packing razor-sharp style and an insatiable thirst for pushing
+            boundaries, they craft flawlessly elegant solutions that leave jaws
+            dropping. Whether battling complex algorithms or crushing relentless
+            bugs, this coding warrior dominates the digital frontier like no
+            other. Brace yourselves for a revolution in software development,
+            where the legend redefines the very essence of badassery in the tech
+            world.
+          </p>
+        </div>
+        <div class="about__img">
+          <img
+            src="/assets/portfolio.jpeg"
+            alt="profile picture"
+            class="about__img about__img--size"
+          />
+        </div>
+        <div class="about__experience">
+          <h3><span class="half-box">E</span>xperience</h3>
+          <hr class="small-hr" />
+          <!-- Dropdown -->
+          <button class="collapsible">Trainee Software Dev @ _nology</button>
+          <button class="collapsible">IT Consultant @ SAIC Ltd</button>
+          <button class="collapsible">Owner @ SouthSide Charmers</button>
+        </div>
+        <div class="about__interests">
+          <h3><span class="half-box">I</span>nterests</h3>
+          <hr class="small-hr" />
+          <!-- Dropdown -->
+          <button class="collapsible">Outdoor Recreation</button>
+          <button class="collapsible">Music</button>
+          <button class="collapsible">Tech_nology</button>
         </div>
       </section>
       <!-- CONTACT SECTION -->
@@ -148,12 +162,13 @@
           </h1>
         </div>
         <button class="contact__button">Contact</button>
-        <!-- MAKE THIS FUN, DIFFERENT -->
       </section>
     </main>
     <footer class="footer">
-      <!-- Put links to respective sites here -->
-      <a href="https://www.linkedin.com/in/n-m-phelan-a02a24276/" target="_blank" class="footer__link"
+      <a
+        href="https://www.linkedin.com/in/n-m-phelan-a02a24276/"
+        target="_blank"
+        class="footer__link"
         ><img
           src="/assets/cib_linkedin-in.png"
           alt="Linked In logo"
@@ -165,6 +180,7 @@
           alt="github logo"
           class="footer__img"
       /></a>
+      <!-- need link to resume -->
       <a href="#" class="footer__link"
         ><img
           src="/assets/academicons_cv.png"
