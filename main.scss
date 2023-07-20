@@ -4,16 +4,26 @@
                 // NAV
 
 .nav {
-
-    padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-family: $secondary-font;
+    padding: 5px 20px ;
 
     .nav__logo {
         font-size: $secondary-font-size;
         opacity: 100%;
+    }
+
+    .nav__button {
+        border: none;
+        &:hover {
+            opacity: 70%;
+        }
+    }
+
+    .nav__burger {
+        height: 30px;
     }
 
     .nav__list {
@@ -33,6 +43,7 @@
 
     .header__paragraph {
         font-size: 1.2rem;
+        padding: 20px 0;
         margin-bottom: 40px;
     }
 
@@ -41,7 +52,6 @@
                 // PORTFOLIO
 
 .portfolio {
-    margin: 40px 0 40px 0;
 
     .portfolio__header {
         margin-bottom: 40px;
@@ -76,8 +86,6 @@
         grid-area: project3;
     }
 
-    // USE NTH CHILD FOR PORTFOLIO ITEMS
-
     .portfolio__project:nth-child(4),
     .portfolio__project:nth-child(5),
     .portfolio__project:nth-child(6) {
@@ -92,7 +100,7 @@
     .projects__img {
         background-color: $tertiary-color;
         opacity: 50%;
-        height: 150px;
+        height: 200px;
         width: 100%;
         border-radius: 1% 5%;
     }
@@ -140,7 +148,6 @@
                 // ABOUT
 
 .about {
-
     display: grid;
     grid-template-areas: 
     "header"
@@ -150,12 +157,15 @@
     "interests";
 
     .about__header {
+        padding: 20px 0;
+        margin-top: 60px;
         font-size: $secondary-font-size;
         grid-area: header;
     }
 
     .about__paragraph {
         grid-area: paragraph;
+        margin-bottom: 40px;
     }
 
     .about__img {
@@ -170,6 +180,7 @@
     }
 
     .about__experience {
+        padding: 10px 0;
         margin-top: 20px;
         grid-area: experience;
         font-family: $secondary-font;
@@ -180,12 +191,33 @@
         grid-area: interests;
         font-family: $secondary-font;
     }
+                // ********** Need to add space between buttons here
+}
 
+.collapsible {
+    font-family: $primary-font;
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+    width: 100%;
+    text-align: left;
+    padding: 20px 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        content: '\02795';
+        color: $tertiary-color;
+        font-size: 8px;
+        float: right;
+    }
 }
 
                 // CONTACT
 
 .contact {
+    padding: 30px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -193,12 +225,13 @@
 
     .contact__header {
         font-size: $primary-font-size;
-        margin: 30px 0 30px 0;
+        margin: 30px 0;
+        padding: 5vh 0;
     }
 
     .contact__button {
-        padding: 5px 25px;
-        border-radius: 3px;
+        padding: 10px 50px;
+        border-radius: 5% 10%;
         font-family: $secondary-font;
         font-size: 1.3rem;
         border: .3px solid $tertiary-color;
@@ -214,6 +247,7 @@
         }
     }
 }
+
 
                 // FOOTER
 
@@ -248,7 +282,7 @@
 // RANDOM STYLING CLASSES
 
 .half-box {
-    border-left: 2px solid $tertiary-color;
+    border-left: 3px solid $tertiary-color;
     border-bottom: 2px solid $tertiary-color;
     box-shadow: 0 0 $accent-color;
     border-radius: 4px;
@@ -287,30 +321,22 @@
 
 // Need to figure out JS for this bit
 
-.collapsible {
-    font-family: $primary-font;
-    border: none;
-    border-bottom: 1px solid $secondary-color;
-    width: 100%;
-    text-align: left;
-
-    &:hover {
-        cursor: pointer;
-    }
-
-    &::after {
-        content: '\02795';
-        color: $tertiary-color;
-        font-size: 8px;
-        float: right;
-    }
-}
 
 // MEDIA SCREENS
 
 @media screen and (min-width: 768px) {
+
+    nav {
+        padding: 60px;
+        margin: 0 40px 0 40px;
+    }
+    main {
+        padding: 40px;
+        margin: 0 40px 0 40px;
+        font-family: $primary-font;
+    }
+
     .nav {
-        padding: 20px;
         justify-content: space-between;
         align-items: center;
     
@@ -318,6 +344,10 @@
             font-family: $secondary-font;
             font-size: 30px;
             opacity: 98%;
+        }
+
+        .nav__button {
+            display: none;
         }
     
         .nav__list {
@@ -328,13 +358,69 @@
     }
 
     .header {        
-        
+
         .header__header {
-            font-size: 2rem;
+            font-size: $secondary-font-size;
         }
         .header__paragraph {
-            width: 40%;
+            width: 45%;
         }
     }
 
+    .portfolio {
+
+        .portfolio__header {
+            font-size: $tertiary-font-size;
+        }
+
+        .portfolio__main {
+            grid-template-areas:
+            "project1 project2 project3"
+            "project4 project5 project6"
+            ;
+        }
+
+        .portfolio__project:nth-child(4),
+        .portfolio__project:nth-child(5),
+        .portfolio__project:nth-child(6) {
+            display: inline;
+        }
+    }
+
+    .about {
+        margin: 20px 40px;
+        padding: 30px 80px;
+        grid-template-areas:
+        "header header img img"
+        "paragraph paragraph img img"
+        "paragraph paragraph img img"
+        "experience experience interests interests"
+        ;
+        gap: 50px;
+
+        .about__header {
+            font-size: $tertiary-font-size;
+        }
+    }
+
+    .contact {
+        .contact__header{
+            font-size: $secondary-font-size;
+        }
+    }
+
+}
+
+@media screen and (min-width:1440px) {
+
+    nav {
+        padding: 40px;
+        margin: 0 60px 0 60px;
+    }
+    main {
+        padding: 40px;
+        margin: 0 60px 0 60px;
+        font-family: $primary-font;
+    }
+    
 }

@@ -4,12 +4,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: #181816;
+  background-color: #1f1f1c;
   color: #a6a5a5;
 }
 
 main {
-  padding: 40px;
+  padding: 20px;
+  margin-bottom: 20px;
   font-family: "Cormorant Garamond", sans-serif;
 }
 
@@ -22,36 +23,43 @@ ul {
 }
 
 .nav {
-  padding: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-family: "Cormorant Upright", sans-serif;
+  padding: 5px 20px;
 }
 .nav .nav__logo {
-  font-size: 25px;
+  font-size: 5vw;
   opacity: 100%;
+}
+.nav .nav__button {
+  border: none;
+}
+.nav .nav__button:hover {
+  opacity: 70%;
+}
+.nav .nav__burger {
+  height: 30px;
 }
 .nav .nav__list {
   display: none;
 }
 
 .header .header__header {
-  font-size: 30px;
+  font-size: 10vw;
   text-align: left;
   margin-bottom: 20px;
 }
 .header .header__paragraph {
   font-size: 1.2rem;
+  padding: 20px 0;
   margin-bottom: 40px;
 }
 
-.portfolio {
-  margin: 40px 0 40px 0;
-}
 .portfolio .portfolio__header {
   margin-bottom: 40px;
-  font-size: 25px;
+  font-size: 5vw;
   display: flex;
 }
 .portfolio .portfolio__header img {
@@ -82,7 +90,7 @@ ul {
 .projects .projects__img {
   background-color: #655946;
   opacity: 50%;
-  height: 150px;
+  height: 200px;
   width: 100%;
   border-radius: 1% 5%;
 }
@@ -124,11 +132,14 @@ ul {
   grid-template-areas: "header" "img" "paragraph" "experience" "interests";
 }
 .about .about__header {
-  font-size: 25px;
+  padding: 20px 0;
+  margin-top: 60px;
+  font-size: 5vw;
   grid-area: header;
 }
 .about .about__paragraph {
   grid-area: paragraph;
+  margin-bottom: 40px;
 }
 .about .about__img {
   grid-area: img;
@@ -141,6 +152,7 @@ ul {
   border-radius: 1% 5%;
 }
 .about .about__experience {
+  padding: 10px 0;
   margin-top: 20px;
   grid-area: experience;
   font-family: "Cormorant Upright", sans-serif;
@@ -151,19 +163,39 @@ ul {
   font-family: "Cormorant Upright", sans-serif;
 }
 
+.collapsible {
+  font-family: "Cormorant Garamond", sans-serif;
+  border: none;
+  border-bottom: 1px solid #513c31;
+  width: 100%;
+  text-align: left;
+  padding: 20px 0;
+}
+.collapsible:hover {
+  cursor: pointer;
+}
+.collapsible::after {
+  content: "➕";
+  color: #655946;
+  font-size: 8px;
+  float: right;
+}
+
 .contact {
+  padding: 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .contact .contact__header {
-  font-size: 30px;
-  margin: 30px 0 30px 0;
+  font-size: 10vw;
+  margin: 30px 0;
+  padding: 5vh 0;
 }
 .contact .contact__button {
-  padding: 5px 25px;
-  border-radius: 3px;
+  padding: 10px 50px;
+  border-radius: 5% 10%;
   font-family: "Cormorant Upright", sans-serif;
   font-size: 1.3rem;
   border: 0.3px solid #655946;
@@ -186,7 +218,7 @@ ul {
   height: 7vh;
 }
 .footer .footer__link {
-  background: #181816;
+  background: #1f1f1c;
   border-radius: 10% 20%;
   padding: 5px 5px 2px 5px;
   margin: 2px;
@@ -201,7 +233,7 @@ ul {
 }
 
 .half-box {
-  border-left: 2px solid #655946;
+  border-left: 3px solid #655946;
   border-bottom: 2px solid #655946;
   box-shadow: 0 0 #a6a5a5;
   border-radius: 4px;
@@ -238,26 +270,17 @@ ul {
   margin: 5px 0 5px 0;
 }
 
-.collapsible {
-  font-family: "Cormorant Garamond", sans-serif;
-  border: none;
-  border-bottom: 1px solid #513c31;
-  width: 100%;
-  text-align: left;
-}
-.collapsible:hover {
-  cursor: pointer;
-}
-.collapsible::after {
-  content: "➕";
-  color: #655946;
-  font-size: 8px;
-  float: right;
-}
-
 @media screen and (min-width: 768px) {
+  nav {
+    padding: 60px;
+    margin: 0 40px 0 40px;
+  }
+  main {
+    padding: 40px;
+    margin: 0 40px 0 40px;
+    font-family: "Cormorant Garamond", sans-serif;
+  }
   .nav {
-    padding: 20px;
     justify-content: space-between;
     align-items: center;
   }
@@ -266,15 +289,52 @@ ul {
     font-size: 30px;
     opacity: 98%;
   }
+  .nav .nav__button {
+    display: none;
+  }
   .nav .nav__list {
     display: inline-flex;
     justify-content: space-between;
     gap: 15px;
   }
   .header .header__header {
-    font-size: 2rem;
+    font-size: 5vw;
   }
   .header .header__paragraph {
-    width: 40%;
+    width: 45%;
+  }
+  .portfolio .portfolio__header {
+    font-size: 3vw;
+  }
+  .portfolio .portfolio__main {
+    grid-template-areas: "project1 project2 project3" "project4 project5 project6";
+  }
+  .portfolio .portfolio__project:nth-child(4),
+  .portfolio .portfolio__project:nth-child(5),
+  .portfolio .portfolio__project:nth-child(6) {
+    display: inline;
+  }
+  .about {
+    margin: 20px 40px;
+    padding: 30px 80px;
+    grid-template-areas: "header header img img" "paragraph paragraph img img" "paragraph paragraph img img" "experience experience interests interests";
+    gap: 50px;
+  }
+  .about .about__header {
+    font-size: 3vw;
+  }
+  .contact .contact__header {
+    font-size: 5vw;
+  }
+}
+@media screen and (min-width: 1440px) {
+  nav {
+    padding: 40px;
+    margin: 0 60px 0 60px;
+  }
+  main {
+    padding: 40px;
+    margin: 0 60px 0 60px;
+    font-family: "Cormorant Garamond", sans-serif;
   }
 }/*# sourceMappingURL=main.css.map */
