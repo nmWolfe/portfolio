@@ -1,6 +1,8 @@
 @use "./variables" as *;
 @use "./resets" as *;
 
+                // NAV
+
 .nav {
 
     padding: 20px;
@@ -19,6 +21,8 @@
     }
 }
 
+                // HEADER
+
 .header {
 
     .header__header {
@@ -34,17 +38,42 @@
 
 }
 
+                // PORTFOLIO
+
 .portfolio {
     margin: 40px 0 40px 0;
 
     .portfolio__header {
         margin-bottom: 40px;
         font-size: $secondary-font-size;
+        display: flex;
+        
+        img {
+            width: 30px;
+            align-self: flex-end;
+        }
     }
 
     .portfolio__main {
         font-family: $secondary-font;
         display: grid;
+        grid-template-areas: 
+        "project1"
+        "project2"
+        "project3";
+        gap: 10px;
+    }
+
+    .portfolio__project:nth-child(1) {
+        grid-area: project1;
+    }
+
+    .portfolio__project:nth-child(2) {
+        grid-area: project2;
+    }
+
+    .portfolio__project:nth-child(3) {
+        grid-area: project3;
     }
 
     // USE NTH CHILD FOR PORTFOLIO ITEMS
@@ -55,6 +84,60 @@
         display: none;
     }
 }
+
+                // PROJECT BOXES
+
+.projects {
+
+    .projects__img {
+        background-color: $tertiary-color;
+        opacity: 50%;
+        height: 150px;
+        width: 100%;
+        border-radius: 1% 5%;
+    }
+
+    .projects__box {
+        margin: 10px 0 10px 0;
+
+        .projects__box--top {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+
+    .project__button {
+        border: none;
+
+        .project__button--round {
+            height: 20px;
+            width: 20px;
+            border-radius: 10% 20%;
+            background-color: $tertiary-color;
+            opacity: 90%;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+
+        &.project__button--rectangle {
+            font-family: $primary-font;
+            background-color: $tertiary-color;
+            text-align: center;
+            opacity: 90%;
+            border-radius: 1% 5%;
+            padding: 2px 10px;
+
+            &:hover {
+                opacity: 70%;
+            }
+        }
+        }
+}
+
+                // ABOUT
 
 .about {
 
@@ -100,6 +183,8 @@
 
 }
 
+                // CONTACT
+
 .contact {
     display: flex;
     flex-direction: column;
@@ -129,6 +214,8 @@
         }
     }
 }
+
+                // FOOTER
 
 .footer {
     display: flex;
@@ -194,9 +281,11 @@
     border: 1px solid $tertiary-color;
     border-radius: 5px;
     box-shadow: 0 1px $accent-color;
-    width: 20px;
-    margin: 5px 0 0 0 ;
+    width: 25px;
+    margin: 5px 0 5px 0 ;
 }
+
+// Need to figure out JS for this bit
 
 .collapsible {
     font-family: $primary-font;
