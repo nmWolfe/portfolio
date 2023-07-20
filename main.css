@@ -52,15 +52,71 @@ ul {
 .portfolio .portfolio__header {
   margin-bottom: 40px;
   font-size: 25px;
+  display: flex;
+}
+.portfolio .portfolio__header img {
+  width: 30px;
+  align-self: flex-end;
 }
 .portfolio .portfolio__main {
   font-family: "Cormorant Upright", sans-serif;
   display: grid;
+  grid-template-areas: "project1" "project2" "project3";
+  gap: 10px;
+}
+.portfolio .portfolio__project:nth-child(1) {
+  grid-area: project1;
+}
+.portfolio .portfolio__project:nth-child(2) {
+  grid-area: project2;
+}
+.portfolio .portfolio__project:nth-child(3) {
+  grid-area: project3;
 }
 .portfolio .portfolio__project:nth-child(4),
 .portfolio .portfolio__project:nth-child(5),
 .portfolio .portfolio__project:nth-child(6) {
   display: none;
+}
+
+.projects .projects__img {
+  background-color: #655946;
+  opacity: 50%;
+  height: 150px;
+  width: 100%;
+  border-radius: 1% 5%;
+}
+.projects .projects__box {
+  margin: 10px 0 10px 0;
+}
+.projects .projects__box .projects__box--top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.projects .project__button {
+  border: none;
+}
+.projects .project__button .project__button--round {
+  height: 20px;
+  width: 20px;
+  border-radius: 10% 20%;
+  background-color: #655946;
+  opacity: 90%;
+}
+.projects .project__button .project__button--round:hover {
+  opacity: 70%;
+}
+.projects .project__button.project__button--rectangle {
+  font-family: "Cormorant Garamond", sans-serif;
+  background-color: #655946;
+  text-align: center;
+  opacity: 90%;
+  border-radius: 1% 5%;
+  padding: 2px 10px;
+}
+.projects .project__button.project__button--rectangle:hover {
+  opacity: 70%;
 }
 
 .about {
@@ -178,8 +234,8 @@ ul {
   border: 1px solid #655946;
   border-radius: 5px;
   box-shadow: 0 1px #a6a5a5;
-  width: 20px;
-  margin: 5px 0 0 0;
+  width: 25px;
+  margin: 5px 0 5px 0;
 }
 
 .collapsible {
