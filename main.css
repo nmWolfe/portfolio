@@ -44,6 +44,12 @@ ul {
 }
 .nav .nav__list {
   display: none;
+  justify-content: space-between;
+  gap: 50px;
+}
+.nav .nav__link:hover {
+  text-decoration: underline;
+  text-decoration-color: #655946;
 }
 
 .header .header__header {
@@ -57,20 +63,60 @@ ul {
   margin-bottom: 40px;
 }
 
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+}
+.skills .skills__header {
+  font-size: 3vw;
+  align-self: center;
+  margin: 10px 0;
+}
+.skills .skills__paragraph {
+  font-family: "Cormorant Garamond", sans-serif;
+  font-size: 3vw;
+  text-align: center;
+  padding: 5px 20px;
+  margin: 20px 0;
+}
+.skills .skills__icons {
+  padding: 10px 5px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.skills .skills__icons h5 {
+  text-align: center;
+  font-size: 1.2vw;
+}
+.skills .skills__img {
+  align-self: center;
+  justify-self: center;
+  height: 25px;
+  width: 25px;
+}
+.skills .skills__img:hover {
+  opacity: 70%;
+}
+
 .portfolio .portfolio__header {
   margin-bottom: 40px;
   font-size: 5vw;
   display: flex;
 }
 .portfolio .portfolio__header img {
-  width: 30px;
+  width: 3vw;
   align-self: flex-end;
 }
 .portfolio .portfolio__main {
   font-family: "Cormorant Upright", sans-serif;
   display: grid;
   grid-template-areas: "project1" "project2" "project3";
-  gap: 10px;
+  gap: 20px;
 }
 .portfolio .portfolio__project:nth-child(1) {
   grid-area: project1;
@@ -95,11 +141,11 @@ ul {
   border-radius: 1% 5%;
 }
 .projects .projects__box {
-  margin: 10px 0 10px 0;
+  margin: 10px 0;
 }
 .projects .projects__box .projects__box--top {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 5px;
 }
 .projects .project__button {
@@ -156,20 +202,24 @@ ul {
   margin-top: 20px;
   grid-area: experience;
   font-family: "Cormorant Upright", sans-serif;
+  font-size: 5vw;
 }
 .about .about__interests {
+  padding: 10px 0;
   margin-top: 20px;
   grid-area: interests;
   font-family: "Cormorant Upright", sans-serif;
+  font-size: 5vw;
 }
 
 .collapsible {
   font-family: "Cormorant Garamond", sans-serif;
+  font-size: 3vw;
   border: none;
   border-bottom: 1px solid #513c31;
   width: 100%;
   text-align: left;
-  padding: 20px 0;
+  padding: 20px 5px;
 }
 .collapsible:hover {
   cursor: pointer;
@@ -182,7 +232,7 @@ ul {
 }
 
 .contact {
-  padding: 30px 0;
+  padding: 5vh 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -195,7 +245,7 @@ ul {
 }
 .contact .contact__button {
   padding: 10px 50px;
-  border-radius: 5% 10%;
+  border-radius: 1% 5%;
   font-family: "Cormorant Upright", sans-serif;
   font-size: 1.3rem;
   border: 0.3px solid #655946;
@@ -248,7 +298,7 @@ ul {
 .flex-hr {
   display: flex;
   border: 1px solid #655946;
-  border-radius: 5px;
+  border-radius: 5px 10px;
   box-shadow: 0 1px #a6a5a5;
   width: 30%;
   margin-bottom: 20px;
@@ -256,7 +306,7 @@ ul {
 
 .large-hr {
   border: 1px solid #655946;
-  border-radius: 5px;
+  border-radius: 5px 10px;
   box-shadow: 0 1px #a6a5a5;
   width: 50px;
   margin: 20px 0 20px 0;
@@ -264,25 +314,26 @@ ul {
 
 .small-hr {
   border: 1px solid #655946;
-  border-radius: 5px;
+  border-radius: 5px 10px;
   box-shadow: 0 1px #a6a5a5;
   width: 25px;
-  margin: 5px 0 5px 0;
+  margin: 10px 0;
 }
 
 @media screen and (min-width: 768px) {
   nav {
     padding: 60px;
-    margin: 0 40px 0 40px;
+    margin: 30px 40px;
   }
   main {
     padding: 40px;
-    margin: 0 40px 0 40px;
+    margin: 0 40px;
     font-family: "Cormorant Garamond", sans-serif;
   }
   .nav {
     justify-content: space-between;
     align-items: center;
+    padding: 10px 40px;
   }
   .nav .nav__logo {
     font-family: "Cormorant Upright", sans-serif;
@@ -294,8 +345,7 @@ ul {
   }
   .nav .nav__list {
     display: inline-flex;
-    justify-content: space-between;
-    gap: 15px;
+    font-size: 1.2vw;
   }
   .header .header__header {
     font-size: 5vw;
@@ -316,12 +366,21 @@ ul {
   }
   .about {
     margin: 20px 40px;
-    padding: 30px 80px;
-    grid-template-areas: "header header img img" "paragraph paragraph img img" "paragraph paragraph img img" "experience experience interests interests";
+    grid-template-areas: "header header img img" "paragraph paragraph img img" "experience experience interests interests";
     gap: 50px;
   }
   .about .about__header {
     font-size: 3vw;
+  }
+  .about .about__img {
+    align-self: center;
+  }
+  .about .about__interests,
+  .about .about__experience {
+    font-size: 3vw;
+  }
+  .collapsible {
+    font-size: 2vw;
   }
   .contact .contact__header {
     font-size: 5vw;
@@ -336,5 +395,16 @@ ul {
     padding: 40px;
     margin: 0 60px 0 60px;
     font-family: "Cormorant Garamond", sans-serif;
+  }
+  .about .about__header {
+    margin: 40px 20px;
+    padding: 40px 20px;
+  }
+  .about .about__paragraph {
+    padding: 0 40px;
+    font-size: 1.2vw;
+  }
+  .about .about__dropdowns {
+    gap: 10px;
   }
 }/*# sourceMappingURL=main.css.map */
