@@ -7,22 +7,30 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <!-- nav -->
-    <nav class="nav">
-      <a href="#" class="nav__logo">
-        <span class="half-box">N</span
-        ><span class="primary-underline">icholas</span>
-        <span class="half-box">P</span
-        ><span class="primary-underline">helan</span>
-      </a>
-      <button class="nav__button"><img src="/assets/burger-menu-left.svg" alt="burger menu" class="nav__burger"></button>
-      <ul class="nav__list">
-        <!-- Fade in a background maybe? -->
-        <li><a href="#" class="nav__link">About</a></li>
-        <li><a href="#" class="nav__link">Portfolio</a></li>
-        <li><a href="#" class="nav__link">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- NAV -->
+    <header>
+      <nav class="nav" id="top">
+        <a href="#top" class="nav__logo">
+          <span class="half-box">N</span
+          ><span class="primary-underline">icholas</span>
+          <span class="half-box">P</span
+          ><span class="primary-underline">helan</span>
+        </a>
+        <button class="nav__button">
+          <img
+            src="/assets/burger-menu-left.svg"
+            alt="burger menu"
+            class="nav__burger"
+          />
+        </button>
+        <ul class="nav__list">
+          <!-- Fade in a background maybe? -->
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
     <!-- main -->
     <main>
       <!--  HEADER -->
@@ -45,8 +53,73 @@
           </p>
         </div>
       </section>
+      <!-- SKILLS -->
+      <section class="skills">
+        <div class="skills__header">
+          <h2>
+            <span class="half-box">T</span>echnical
+            <span class="half-box">S</span>kills
+          </h2>
+        </div>
+        <div class="skills__paragraph">
+          <p>
+            I fearlessly wield an unrivaled arsenal of technical skills,
+            conquering complexity with a legendary and badass flair.
+          </p>
+        </div>
+        <div class="skills__icons">
+          <div>
+            <img src="/assets/html.svg" alt="HTML5" class="skills__img" />
+            <h5>HTML5</h5>
+          </div>
+          <div>
+            <img src="/assets/css.svg" alt="CSS3" class="skills__img" />
+            <h5>CSS3</h5>
+          </div>
+          <div>
+            <img src="/assets/scss.svg" alt="SCSS" class="skills__img" />
+            <h5>SCSS</h5>
+          </div>
+          <div>
+            <img src="/assets/bem.svg" alt="BEM" class="skills__img" />
+            <h5>BEM</h5>
+          </div>
+          <div>
+            <img src="/assets/git.svg" alt="GIT" class="skills__img" />
+            <h5>GIT</h5>
+          </div>
+          <div>
+            <img
+              src="/assets/javascript.svg"
+              alt="Javascript"
+              class="skills__img"
+            />
+            <h5>Javascript</h5>
+          </div>
+          <div>
+            <img src="/assets/react.svg" alt="React" class="skills__img" />
+            <h5>React</h5>
+          </div>
+          <div>
+            <img src="/assets/java.svg" alt="Java" class="skills__img" />
+            <h5>Java</h5>
+          </div>
+          <div>
+            <img
+              src="/assets/spring.svg"
+              alt="Spring Boot"
+              class="skills__img"
+            />
+            <h5>Spring Boot</h5>
+          </div>
+          <div>
+            <img src="/assets/python.svg" alt="Python" class="skills__img" />
+            <h5>Python</h5>
+          </div>
+        </div>
+      </section>
       <!-- PORTFOLIO SECTION -->
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="portfolio__header">
           <h2><span class="half-box">P</span>ortfolio</h2>
           <img src="/assets/arrow-down.svg" alt="arrow-down" />
@@ -58,20 +131,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 1</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -91,20 +166,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 2</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -124,20 +201,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 3</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -157,20 +236,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 4</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -190,20 +271,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 5</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -223,20 +306,22 @@
               <div class="projects__box">
                 <div class="projects__box--top">
                   <h3>Project 6</h3>
-                  <button class="project__button">
-                    <img
-                      src="/assets/eye.svg"
-                      alt="eye"
-                      class="project__button--round"
-                    />
-                  </button>
-                  <button class="project__button">
-                    <img
-                      src="/assets/code.svg"
-                      alt="code"
-                      class="project__button--round"
-                    />
-                  </button>
+                  <div>
+                    <button class="project__button">
+                      <img
+                        src="/assets/eye.svg"
+                        alt="eye"
+                        class="project__button--round"
+                      />
+                    </button>
+                    <button class="project__button">
+                      <img
+                        src="/assets/code.svg"
+                        alt="code"
+                        class="project__button--round"
+                      />
+                    </button>
+                  </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
@@ -253,7 +338,7 @@
         </div>
       </section>
       <!-- ABOUT SECTION -->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__header">
           <h2><span class="half-box">A</span>bout Me</h2>
           <hr class="large-hr" />
@@ -265,8 +350,8 @@
             legend, unmatched in skill and daring. With an unyielding passion
             for innovation and a tenacity that knows no bounds, this coding
             virtuoso fearlessly takes on the most challenging projects, emerging
-            victorious every single time. 
-            <br/><br>
+            victorious every single time.
+            <br /><br />
             Packing razor-sharp style and an insatiable thirst for pushing
             boundaries, they craft flawlessly elegant solutions that leave jaws
             dropping. Whether battling complex algorithms or crushing relentless
@@ -302,7 +387,7 @@
       </section>
       <!-- CONTACT SECTION -->
       <!-- ********************************* Create a contact form  -->
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="contact__header">
           <h1>
             <span class="half-box">R</span>each
