@@ -1,17 +1,27 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Cormorant+Upright&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+Upright:wght@400;600&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   background-color: #1f1f1c;
   color: #a6a5a5;
+  transition: opacity 1s;
+}
+
+body {
+  max-width: 1660px;
+  margin: auto;
+}
+
+header {
+  background-color: #513c31;
 }
 
 main {
   padding: 20px;
   margin-bottom: 20px;
-  font-family: "Cormorant Garamond", sans-serif;
+  font-family: "Cormorant Garamond", georgia;
 }
 
 a {
@@ -26,17 +36,17 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "Cormorant Upright", sans-serif;
+  font-family: "Cormorant Upright", georgia;
   padding: 5px 20px;
 }
 .nav .nav__logo {
   font-size: 5vw;
   opacity: 100%;
 }
-.nav .nav__button {
+.nav .nav__dropdown {
   border: none;
 }
-.nav .nav__button:hover {
+.nav .nav__dropdown:hover {
   opacity: 70%;
 }
 .nav .nav__burger {
@@ -47,9 +57,8 @@ ul {
   justify-content: space-between;
   gap: 50px;
 }
-.nav .nav__link:hover {
-  text-decoration: underline;
-  text-decoration-color: #655946;
+.nav .nav__link .nav__link:hover {
+  opacity: 50%;
 }
 
 .header .header__header {
@@ -75,7 +84,7 @@ ul {
   margin: 10px 0;
 }
 .skills .skills__paragraph {
-  font-family: "Cormorant Garamond", sans-serif;
+  font-family: "Cormorant Garamond", georgia;
   font-size: 3vw;
   text-align: center;
   padding: 5px 20px;
@@ -87,15 +96,21 @@ ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
 }
 .skills .skills__icons h5 {
+  font-family: "Cormorant Upright", georgia;
   text-align: center;
   font-size: 1.2vw;
 }
+.skills .skills__icons h5:hover {
+  opacity: 70%;
+  cursor: auto;
+}
+.skills .skills__icons div {
+  padding: 5px;
+  text-align: center;
+}
 .skills .skills__img {
-  align-self: center;
-  justify-self: center;
   height: 25px;
   width: 25px;
 }
@@ -113,7 +128,7 @@ ul {
   align-self: flex-end;
 }
 .portfolio .portfolio__main {
-  font-family: "Cormorant Upright", sans-serif;
+  font-family: "Cormorant Upright", georgia;
   display: grid;
   grid-template-areas: "project1" "project2" "project3";
   gap: 20px;
@@ -152,8 +167,8 @@ ul {
   border: none;
 }
 .projects .project__button .project__button--round {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   border-radius: 10% 20%;
   background-color: #655946;
   opacity: 90%;
@@ -162,8 +177,9 @@ ul {
   opacity: 70%;
 }
 .projects .project__button.project__button--rectangle {
-  font-family: "Cormorant Garamond", sans-serif;
+  font-family: "Cormorant Garamond", georgia;
   background-color: #655946;
+  font-weight: bold;
   text-align: center;
   opacity: 90%;
   border-radius: 1% 5%;
@@ -189,7 +205,8 @@ ul {
 }
 .about .about__img {
   grid-area: img;
-  margin: 20px 0 20px 0;
+  margin-bottom: 20px;
+  position: relative;
 }
 .about .about__img .about__img--size {
   -o-object-fit: cover;
@@ -197,29 +214,43 @@ ul {
   width: 100%;
   border-radius: 1% 5%;
 }
+.about .about__img--background {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  border-radius: 1% 5%;
+  opacity: 30%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
 .about .about__experience {
   padding: 10px 0;
   margin-top: 20px;
   grid-area: experience;
-  font-family: "Cormorant Upright", sans-serif;
+  font-family: "Cormorant Upright", georgia;
   font-size: 5vw;
 }
 .about .about__interests {
   padding: 10px 0;
   margin-top: 20px;
   grid-area: interests;
-  font-family: "Cormorant Upright", sans-serif;
+  font-family: "Cormorant Upright", georgia;
   font-size: 5vw;
 }
 
 .collapsible {
-  font-family: "Cormorant Garamond", sans-serif;
+  font-family: "Cormorant Garamond", georgia;
   font-size: 3vw;
   border: none;
   border-bottom: 1px solid #513c31;
   width: 100%;
   text-align: left;
   padding: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .collapsible:hover {
   cursor: pointer;
@@ -246,9 +277,10 @@ ul {
 .contact .contact__button {
   padding: 10px 50px;
   border-radius: 1% 5%;
-  font-family: "Cormorant Upright", sans-serif;
+  font-family: "Cormorant Upright", georgia;
   font-size: 1.3rem;
   border: 0.3px solid #655946;
+  transition: background-color 1s;
 }
 .contact .contact__button:hover {
   background-color: #a6a5a5;
@@ -257,6 +289,40 @@ ul {
 .contact .contact__button:active {
   background-color: #513c31;
   color: #a6a5a5;
+}
+
+.contact__form {
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.contact__form input[type=text],
+.contact__form select,
+.contact__form textarea {
+  font-family: "Cormorant Garamond", georgia;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #655946;
+  border-radius: 1% 5%;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+.contact__form input[type=submit] {
+  font-family: "Cormorant Upright", georgia;
+  border: 1px solid #655946;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 1% 5%;
+  transition: background-color 1s;
+}
+.contact__form input[type=submit]:hover {
+  background-color: #a6a5a5;
+  color: #655946;
+}
+
+.contact__form.open-menu {
+  max-height: 500px;
 }
 
 .footer {
@@ -280,6 +346,27 @@ ul {
   background: none;
   width: auto;
   height: 20px;
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown .dropdown__burger {
+  position: absolute;
+  right: 17px;
+  background-color: rgba(101, 89, 70, 0.2);
+  padding: 4px;
+  border-radius: 1% 5%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.15s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.dropdown > .nav__dropdown:focus + .dropdown__burger {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
 .half-box {
@@ -320,7 +407,7 @@ ul {
   margin: 10px 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   nav {
     padding: 60px;
     margin: 30px 40px;
@@ -328,7 +415,7 @@ ul {
   main {
     padding: 40px;
     margin: 0 40px;
-    font-family: "Cormorant Garamond", sans-serif;
+    font-family: "Cormorant Garamond", georgia;
   }
   .nav {
     justify-content: space-between;
@@ -336,11 +423,11 @@ ul {
     padding: 10px 40px;
   }
   .nav .nav__logo {
-    font-family: "Cormorant Upright", sans-serif;
+    font-family: "Cormorant Upright", georgia;
     font-size: 30px;
     opacity: 98%;
   }
-  .nav .nav__button {
+  .nav .nav__dropdown {
     display: none;
   }
   .nav .nav__list {
@@ -352,6 +439,28 @@ ul {
   }
   .header .header__paragraph {
     width: 45%;
+  }
+  .skills {
+    display: grid;
+    grid-template-areas: "header skills" "paragraph skills";
+    padding: 20px 0;
+  }
+  .skills .skills__header {
+    grid-area: header;
+    font-size: 3vw;
+    text-align: center;
+  }
+  .skills .skills__paragraph {
+    grid-area: paragraph;
+    font-size: 1.2rem;
+  }
+  .skills .skills__icons {
+    grid-area: skills;
+    gap: 10px;
+  }
+  .skills .skills__img {
+    height: 40px;
+    width: 40px;
   }
   .portfolio .portfolio__header {
     font-size: 3vw;
@@ -375,6 +484,9 @@ ul {
   .about .about__img {
     align-self: center;
   }
+  .about .about__img--background {
+    display: block;
+  }
   .about .about__interests,
   .about .about__experience {
     font-size: 3vw;
@@ -388,13 +500,17 @@ ul {
 }
 @media screen and (min-width: 1440px) {
   nav {
-    padding: 40px;
-    margin: 0 60px 0 60px;
+    padding: 60px;
+    margin: 30px 40px;
   }
   main {
     padding: 40px;
-    margin: 0 60px 0 60px;
-    font-family: "Cormorant Garamond", sans-serif;
+    margin: 0 40px;
+    font-family: "Cormorant Garamond", georgia;
+  }
+  .skills {
+    padding: 10px 40px;
+    margin: 10px 40px;
   }
   .about .about__header {
     margin: 40px 20px;
@@ -406,5 +522,8 @@ ul {
   }
   .about .about__dropdowns {
     gap: 10px;
+  }
+  .about .about__img {
+    margin-right: 60px;
   }
 }/*# sourceMappingURL=main.css.map */

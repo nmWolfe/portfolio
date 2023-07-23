@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nicholas Phelan</title>
     <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- NAV -->
@@ -16,18 +17,30 @@
           <span class="half-box">P</span
           ><span class="primary-underline">helan</span>
         </a>
-        <button class="nav__button">
-          <img
-            src="/assets/burger-menu-left.svg"
-            alt="burger menu"
-            class="nav__burger"
-          />
-        </button>
+        <div class="dropdown">
+          <button class="nav__dropdown">
+            <img
+              src="/assets/burger-menu-left.svg"
+              alt="burger menu"
+              class="nav__burger"
+            />
+          </button>
+          <div class="dropdown__burger">
+            <ul>
+              <li><a href="#about" class="nav__link">About</a></li>
+              <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+              <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
         <ul class="nav__list">
-          <!-- Fade in a background maybe? -->
           <li><a href="#about" class="nav__link">About</a></li>
           <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
-          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li>
+            <a href="#contact" class="nav__link" onclick="toggleForm()"
+              >Contact</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -64,7 +77,7 @@
         <div class="skills__paragraph">
           <p>
             I fearlessly wield an unrivaled arsenal of technical skills,
-            conquering complexity with a legendary and badass flair.
+            conquering complexity with a legendary flair.
           </p>
         </div>
         <div class="skills__icons">
@@ -364,6 +377,11 @@
         <div class="about__img">
           <img
             src="/assets/portfolio.jpeg"
+            alt="faded profile picture"
+            class="about__img--background"
+          />
+          <img
+            src="/assets/portfolio.jpeg"
             alt="profile picture"
             class="about__img about__img--size"
           />
@@ -380,9 +398,9 @@
           <h3><span class="half-box">I</span>nterests</h3>
           <hr class="small-hr" />
           <!-- Dropdown -->
-          <button class="collapsible">Outdoor Recreation</button>
-          <button class="collapsible">Music</button>
           <button class="collapsible">Tech_nology</button>
+          <button class="collapsible">Health & Fitness</button>
+          <button class="collapsible">Music</button>
         </div>
       </section>
       <!-- CONTACT SECTION -->
@@ -394,7 +412,35 @@
             <span class="half-box">O</span>ut
           </h1>
         </div>
-        <button class="contact__button">Contact</button>
+        <button class="contact__button" onclick="toggleForm()">Contact</button>
+        <div class="contact__form" id="formDisplay">
+          <form action="#">
+            <label for="name">Full Name</label>
+            <input
+              type="text"
+              id="full-name"
+              placeholder="Please enter your name."
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="Please enter your email."
+            />
+
+            <label for="subject">Your Enquiry</label>
+            <textarea
+              name="subject"
+              id="subject"
+              cols="30"
+              rows="10"
+              placeholder="Tell me more."
+            ></textarea>
+
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
       </section>
     </main>
     <!-- FOOTER -->
