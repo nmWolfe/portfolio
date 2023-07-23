@@ -1,24 +1,33 @@
 @use "./variables" as *;
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    background-color: $primary-color;
-    color: $accent-color;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $primary-color;
+  color: $accent-color;
+  transition: opacity 1s;
+}
+
+body {
+  max-width: 1660px;
+  margin: auto;
+}
+
+header {
+  background-color: $secondary-color;
 }
 
 main {
-    padding: 20px;
-    margin-bottom: 20px;
-    font-family: $primary-font;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: $primary-font;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
-

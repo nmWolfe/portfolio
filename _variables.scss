@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Cormorant+Upright&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Cormorant+Upright:wght@400;600&display=swap");
 
 $primary-color: #1f1f1c;
 $secondary-color: #513c31;
@@ -6,9 +6,10 @@ $tertiary-color: #655946;
 $accent-color: #a6a5a5;
 $delicious-color: #2c592e;
 
-$primary-font: "Cormorant Garamond", sans-serif;
-$secondary-font: "Cormorant Upright", sans-serif;
+$primary-font: "Cormorant Garamond", georgia;
+$secondary-font: "Cormorant Upright", georgia;
 
+$max-font-size: 5vw;
 $primary-font-size: 10vw;
 $secondary-font-size: 5vw;
 $tertiary-font-size: 3vw;
