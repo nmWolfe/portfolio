@@ -43,13 +43,29 @@ ul {
   font-size: 5vw;
   opacity: 100%;
 }
-.nav .nav__dropdown {
+.nav .nav__dropdown--button {
   border: none;
 }
-.nav .nav__dropdown:hover {
+.nav .nav__dropdown--button:hover {
   opacity: 70%;
 }
-.nav .nav__burger {
+.nav .nav__dropdown--list {
+  text-align: right;
+  position: fixed;
+  right: 35px;
+  margin-bottom: 1px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.nav .nav__dropdown--list a:hover {
+  text-decoration: underline;
+  text-decoration-color: #655946;
+}
+.nav .nav__dropdown--list.show {
+  max-height: 100px;
+}
+.nav .nav__burger--img {
   height: 30px;
 }
 .nav .nav__list {
@@ -57,8 +73,9 @@ ul {
   justify-content: space-between;
   gap: 50px;
 }
-.nav .nav__link .nav__link:hover {
-  opacity: 50%;
+.nav .nav__list a:hover {
+  text-decoration: underline;
+  text-decoration-color: #655946;
 }
 
 .header .header__header {
@@ -79,7 +96,7 @@ ul {
   padding: 10px 5px;
 }
 .skills .skills__header {
-  font-size: 3vw;
+  font-size: 1rem;
   align-self: center;
   margin: 10px 0;
 }
@@ -104,7 +121,7 @@ ul {
 }
 .skills .skills__icons h5:hover {
   opacity: 70%;
-  cursor: auto;
+  cursor: default;
 }
 .skills .skills__icons div {
   padding: 5px;
@@ -150,10 +167,14 @@ ul {
 
 .projects .projects__img {
   background-color: #655946;
-  opacity: 50%;
-  height: 200px;
+  height: 250px;
   width: 100%;
   border-radius: 1% 5%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.projects .projects__img img {
+  width: 100%;
 }
 .projects .projects__box {
   margin: 10px 0;
@@ -170,23 +191,21 @@ ul {
   height: 25px;
   width: 25px;
   border-radius: 10% 20%;
-  background-color: #655946;
-  opacity: 90%;
+  background-color: rgba(101, 89, 70, 0.2);
 }
 .projects .project__button .project__button--round:hover {
-  opacity: 70%;
+  background-color: #655946;
 }
 .projects .project__button.project__button--rectangle {
   font-family: "Cormorant Garamond", georgia;
-  background-color: #655946;
+  background-color: rgba(101, 89, 70, 0.2);
   font-weight: bold;
   text-align: center;
-  opacity: 90%;
   border-radius: 1% 5%;
   padding: 2px 10px;
 }
 .projects .project__button.project__button--rectangle:hover {
-  opacity: 70%;
+  background-color: #655946;
 }
 
 .about {
@@ -211,6 +230,7 @@ ul {
 .about .about__img .about__img--size {
   -o-object-fit: cover;
      object-fit: cover;
+  height: auto;
   width: 100%;
   border-radius: 1% 5%;
 }
@@ -232,6 +252,28 @@ ul {
   font-family: "Cormorant Upright", georgia;
   font-size: 5vw;
 }
+.about .about__experience .about__sub-header {
+  color: #655946;
+  margin-bottom: 5px;
+}
+.about .about__experience .about__ul {
+  margin-left: 10px;
+}
+.about .about__experience .about__ul li {
+  background-color: rgba(101, 89, 70, 0.05);
+  border-radius: 1% 5%;
+  margin-bottom: 5px;
+}
+.about .about__experience--1, .about .about__experience--2, .about .about__experience--3 {
+  padding: 0 10px;
+  font-size: 0.6rem;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+}
+.about .about__experience--1.show, .about .about__experience--2.show, .about .about__experience--3.show {
+  max-height: 15vw;
+}
 .about .about__interests {
   padding: 10px 0;
   margin-top: 20px;
@@ -239,10 +281,22 @@ ul {
   font-family: "Cormorant Upright", georgia;
   font-size: 5vw;
 }
-
-.collapsible {
+.about .about__interests p {
+  background-color: rgba(101, 89, 70, 0.05);
+  border-radius: 1% 5%;
+  font-size: 0.6rem;
+  margin: 10px 10px;
+}
+.about .about__interests--1, .about .about__interests--2, .about .about__interests--3 {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s;
+}
+.about .about__interests--1.show, .about .about__interests--2.show, .about .about__interests--3.show {
+  max-height: 15vw;
+}
+.about .about__collapsible {
   font-family: "Cormorant Garamond", georgia;
-  font-size: 3vw;
   border: none;
   border-bottom: 1px solid #513c31;
   width: 100%;
@@ -252,10 +306,10 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-.collapsible:hover {
+.about .about__collapsible:hover {
   cursor: pointer;
 }
-.collapsible::after {
+.about .about__collapsible::after {
   content: "➕";
   color: #655946;
   font-size: 8px;
@@ -275,10 +329,10 @@ ul {
   padding: 5vh 0;
 }
 .contact .contact__button {
-  padding: 10px 50px;
+  padding: 1vw 5vw;
   border-radius: 1% 5%;
   font-family: "Cormorant Upright", georgia;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   border: 0.3px solid #655946;
   transition: background-color 1s;
 }
@@ -295,7 +349,7 @@ ul {
   margin-top: 10px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 0.5s ease-in-out;
 }
 .contact__form input[type=text],
 .contact__form select,
@@ -307,6 +361,7 @@ ul {
   border-radius: 1% 5%;
   margin-top: 6px;
   margin-bottom: 16px;
+  resize: none;
 }
 .contact__form input[type=submit] {
   font-family: "Cormorant Upright", georgia;
@@ -321,7 +376,7 @@ ul {
   color: #655946;
 }
 
-.contact__form.open-menu {
+.contact__form.show {
   max-height: 500px;
 }
 
@@ -346,65 +401,6 @@ ul {
   background: none;
   width: auto;
   height: 20px;
-}
-
-.dropdown {
-  position: relative;
-}
-.dropdown .dropdown__burger {
-  position: absolute;
-  right: 17px;
-  background-color: rgba(101, 89, 70, 0.2);
-  padding: 4px;
-  border-radius: 1% 5%;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-8px);
-  transition: opacity 0.15s ease-in-out, transform 0.2s ease-in-out;
-}
-
-.dropdown > .nav__dropdown:focus + .dropdown__burger {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.half-box {
-  border-left: 3px solid #655946;
-  border-bottom: 2px solid #655946;
-  box-shadow: 0 0 #a6a5a5;
-  border-radius: 4px;
-  color: #655946;
-}
-
-.primary-underline {
-  text-decoration: underline;
-  text-decoration-color: #655946;
-}
-
-.flex-hr {
-  display: flex;
-  border: 1px solid #655946;
-  border-radius: 5px 10px;
-  box-shadow: 0 1px #a6a5a5;
-  width: 30%;
-  margin-bottom: 20px;
-}
-
-.large-hr {
-  border: 1px solid #655946;
-  border-radius: 5px 10px;
-  box-shadow: 0 1px #a6a5a5;
-  width: 50px;
-  margin: 20px 0 20px 0;
-}
-
-.small-hr {
-  border: 1px solid #655946;
-  border-radius: 5px 10px;
-  box-shadow: 0 1px #a6a5a5;
-  width: 25px;
-  margin: 10px 0;
 }
 
 @media screen and (min-width: 700px) {
@@ -466,11 +462,10 @@ ul {
     font-size: 3vw;
   }
   .portfolio .portfolio__main {
-    grid-template-areas: "project1 project2 project3" "project4 project5 project6";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "project1 project2" "project3 project4";
   }
-  .portfolio .portfolio__project:nth-child(4),
-  .portfolio .portfolio__project:nth-child(5),
-  .portfolio .portfolio__project:nth-child(6) {
+  .portfolio .portfolio__project:nth-child(4) {
     display: inline;
   }
   .about {
@@ -491,6 +486,18 @@ ul {
   .about .about__experience {
     font-size: 3vw;
   }
+  .about .about__interests button,
+  .about .about__experience button {
+    font-size: 1rem;
+  }
+  .about .about__interests div,
+  .about .about__experience div {
+    font-size: 1rem;
+  }
+  .about .about__interests p,
+  .about .about__experience p {
+    font-size: 1rem;
+  }
   .collapsible {
     font-size: 2vw;
   }
@@ -498,7 +505,7 @@ ul {
     font-size: 5vw;
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1000px) {
   nav {
     padding: 60px;
     margin: 30px 40px;
@@ -508,9 +515,21 @@ ul {
     margin: 0 40px;
     font-family: "Cormorant Garamond", georgia;
   }
+  .portfolio .portfolio__main {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "project1 project2 project3" "project4 project5 project6";
+  }
+  .portfolio .portfolio__project:nth-child(4),
+  .portfolio .portfolio__project:nth-child(5),
+  .portfolio .portfolio__project:nth-child(6) {
+    display: inline;
+  }
   .skills {
     padding: 10px 40px;
     margin: 10px 40px;
+  }
+  .about {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .about .about__header {
     margin: 40px 20px;
@@ -526,4 +545,49 @@ ul {
   .about .about__img {
     margin-right: 60px;
   }
+  .contact .contact__header {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .header__header {
+    font-size: 3.5rem;
+  }
+}
+.half-box {
+  border-left: 3px solid #655946;
+  border-bottom: 2px solid #655946;
+  box-shadow: 0 0 #a6a5a5;
+  border-radius: 4px;
+  color: #655946;
+}
+
+.primary-underline {
+  text-decoration: underline;
+  text-decoration-color: #655946;
+}
+
+.flex-hr {
+  display: flex;
+  border: 1px solid #655946;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px #a6a5a5;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.large-hr {
+  border: 1px solid #655946;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px #a6a5a5;
+  width: 50px;
+  margin: 20px 0 20px 0;
+}
+
+.small-hr {
+  border: 1px solid #655946;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px #a6a5a5;
+  width: 25px;
+  margin: 10px 0;
 }/*# sourceMappingURL=main.css.map */
