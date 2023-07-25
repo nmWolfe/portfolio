@@ -176,6 +176,9 @@ ul {
 .projects .projects__img img {
   width: 100%;
 }
+.projects .projects__img img .projects__img--1 {
+  display: none;
+}
 .projects .projects__box {
   margin: 10px 0;
 }
