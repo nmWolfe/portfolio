@@ -1,0 +1,208 @@
+@use "./resets" as *;
+@use "./variables.scss" as *;
+@use "./sections-styles" as *;
+
+// MEDIA SCREENS
+
+// IPAD
+
+@media screen and (min-width: 700px) {
+  nav {
+    padding: 60px;
+    margin: 30px 40px;
+  }
+
+  main {
+    padding: 40px;
+    margin: 0 40px;
+    font-family: $primary-font;
+  }
+
+  .nav {
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    .nav__logo {
+      font-family: $secondary-font;
+      font-size: 30px;
+      opacity: 98%;
+    }
+
+    .nav__dropdown {
+      display: none;
+    }
+
+    .nav__list {
+      display: inline-flex;
+      font-size: 1.2vw;
+    }
+  }
+
+  .header {
+    .header__header {
+      font-size: $secondary-font-size;
+    }
+    .header__paragraph {
+      width: 45%;
+    }
+  }
+
+  .skills {
+    display: grid;
+    grid-template-areas:
+      "header skills"
+      "paragraph skills";
+    padding: 20px 0;
+    .skills__header {
+      grid-area: header;
+      font-size: $tertiary-font-size;
+      text-align: center;
+    }
+
+    .skills__paragraph {
+      grid-area: paragraph;
+      font-size: $paragraph-font-size;
+    }
+
+    .skills__icons {
+      grid-area: skills;
+      gap: 10px;
+    }
+
+    .skills__img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .portfolio {
+    .portfolio__header {
+      font-size: $tertiary-font-size;
+    }
+
+    .portfolio__main {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "project1 project2"
+        "project3 project4";
+    }
+
+    .portfolio__project:nth-child(4) {
+      display: inline;
+    }
+  }
+
+  .about {
+    margin: 20px 40px;
+    grid-template-areas:
+      "header header img img"
+      "paragraph paragraph img img"
+      "experience experience interests interests";
+    gap: 50px;
+
+    .about__header {
+      font-size: $tertiary-font-size;
+    }
+
+    .about__img {
+      align-self: center;
+    }
+
+    .about__img--background {
+      display: block;
+    }
+
+    .about__interests,
+    .about__experience {
+      font-size: $tertiary-font-size;
+      button {
+        font-size: 1rem;
+      }
+      div {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .collapsible {
+    font-size: 2vw;
+  }
+
+  .contact {
+    .contact__header {
+      font-size: $secondary-font-size;
+    }
+  }
+}
+
+// DESKTOPS
+
+@media screen and (min-width: 1000px) {
+  nav {
+    padding: 60px;
+    margin: 30px 40px;
+  }
+  main {
+    padding: 40px;
+    margin: 0 40px;
+    font-family: $primary-font;
+  }
+
+  .portfolio {
+    .portfolio__main {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas:
+        "project1 project2 project3"
+        "project4 project5 project6";
+    }
+
+    .portfolio__project:nth-child(4),
+    .portfolio__project:nth-child(5),
+    .portfolio__project:nth-child(6) {
+      display: inline;
+    }
+  }
+
+  .skills {
+    padding: 10px 40px;
+    margin: 10px 40px;
+  }
+
+  .about {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .about__header {
+      margin: 40px 20px;
+      padding: 40px 20px;
+    }
+
+    .about__paragraph {
+      padding: 0 40px;
+      font-size: 1.2vw;
+    }
+
+    .about__dropdowns {
+      gap: 10px;
+    }
+
+    .about__img {
+      margin-right: 60px;
+    }
+  }
+
+  .contact {
+    .contact__header {
+      font-size: 3.5rem;
+    }
+  }
+}
+
+// MAX WIDTH
+// ******************* NEED TO SET MAX WIDTH FONT SIZES
+@media screen and (max-width: 1800px) {
+  .header__header {
+    font-size: 3.5rem;
+  }
+}

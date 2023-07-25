@@ -1,0 +1,446 @@
+@use "./variables" as *;
+
+// NAV
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $secondary-font;
+  padding: 5px 20px;
+  .nav__logo {
+    font-size: $secondary-font-size;
+    opacity: 100%;
+  }
+
+  .nav__dropdown--button {
+    border: none;
+    &:hover {
+      opacity: 70%;
+    }
+  }
+  .nav__dropdown--list {
+    text-align: right;
+    position: fixed;
+    right: 35px;
+    margin-bottom: 1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #655946;
+    }
+  }
+  .nav__dropdown--list.show {
+    max-height: 100px;
+  }
+
+  .nav__burger--img {
+    height: 30px;
+  }
+
+  .nav__list {
+    display: none;
+    justify-content: space-between;
+    gap: 50px;
+    a:hover {
+      text-decoration: underline;
+      text-decoration-color: #655946;
+    }
+  }
+}
+
+// HEADER
+
+.header {
+  .header__header {
+    font-size: $primary-font-size;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .header__paragraph {
+    font-size: 1.2rem;
+    padding: 20px 0;
+    margin-bottom: 40px;
+  }
+}
+
+// SKILLS
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+  .skills__header {
+    font-size: 1rem;
+    align-self: center;
+    margin: 10px 0;
+  }
+
+  .skills__paragraph {
+    font-family: $primary-font;
+    font-size: $tertiary-font-size;
+    text-align: center;
+    padding: 5px 20px;
+    margin: 20px 0;
+  }
+
+  .skills__icons {
+    padding: 10px 5px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    h5 {
+      font-family: $secondary-font;
+      text-align: center;
+      font-size: 1.2vw;
+      &:hover {
+        opacity: 70%;
+        cursor: default;
+      }
+    }
+    div {
+      padding: 5px;
+      text-align: center;
+    }
+  }
+
+  .skills__img {
+    height: 25px;
+    width: 25px;
+    &:hover {
+      opacity: 70%;
+    }
+  }
+}
+
+// PORTFOLIO
+
+.portfolio {
+  .portfolio__header {
+    margin-bottom: 40px;
+    font-size: $secondary-font-size;
+    display: flex;
+
+    img {
+      width: 3vw;
+      align-self: flex-end;
+    }
+  }
+
+  .portfolio__main {
+    font-family: $secondary-font;
+    display: grid;
+    grid-template-areas:
+      "project1"
+      "project2"
+      "project3";
+    gap: 20px;
+  }
+
+  .portfolio__project:nth-child(1) {
+    grid-area: project1;
+  }
+
+  .portfolio__project:nth-child(2) {
+    grid-area: project2;
+  }
+
+  .portfolio__project:nth-child(3) {
+    grid-area: project3;
+  }
+
+  .portfolio__project:nth-child(4),
+  .portfolio__project:nth-child(5),
+  .portfolio__project:nth-child(6) {
+    display: none;
+  }
+}
+
+// PROJECT BOXES
+
+.projects {
+  .projects__img {
+    background-color: $tertiary-color;
+    height: 250px;
+    width: 100%;
+    border-radius: 1% 5%;
+    overflow: hidden;
+    overflow-y: scroll;
+    img {
+      width: 100%;
+    }
+  }
+
+  .projects__box {
+    margin: 10px 0;
+
+    .projects__box--top {
+      display: flex;
+      justify-content: space-between;
+      gap: 5px;
+    }
+  }
+
+  .project__button {
+    border: none;
+
+    .project__button--round {
+      height: 25px;
+      width: 25px;
+      border-radius: 10% 20%;
+      background-color: rgba($color: #655946, $alpha: 0.2);
+
+      &:hover {
+        background-color: rgba($color: #655946, $alpha: 1);
+      }
+    }
+
+    &.project__button--rectangle {
+      font-family: $primary-font;
+      background-color: rgba($color: #655946, $alpha: 0.2);
+      font-weight: bold;
+      text-align: center;
+      border-radius: 1% 5%;
+      padding: 2px 10px;
+
+      &:hover {
+        background-color: rgba($color: #655946, $alpha: 1);
+      }
+    }
+  }
+}
+
+// ABOUT
+
+.about {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "img"
+    "paragraph"
+    "experience"
+    "interests";
+
+  .about__header {
+    padding: 20px 0;
+    margin-top: 60px;
+    font-size: $secondary-font-size;
+    grid-area: header;
+  }
+
+  .about__paragraph {
+    grid-area: paragraph;
+    margin-bottom: 40px;
+  }
+
+  .about__img {
+    grid-area: img;
+    margin-bottom: 20px;
+    position: relative;
+
+    .about__img--size {
+      object-fit: cover;
+      height: auto;
+      width: 100%;
+      border-radius: 1% 5%;
+    }
+  }
+
+  .about__img--background {
+    display: none;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1% 5%;
+    opacity: 30%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .about__experience {
+    padding: 10px 0;
+    margin-top: 20px;
+    grid-area: experience;
+    font-family: $secondary-font;
+    font-size: $secondary-font-size;
+    .about__sub-header {
+      color: $tertiary-color;
+      margin-bottom: 5px;
+    }
+    .about__ul {
+      margin-left: 10px;
+      li {
+        background-color: rgba($color: #655946, $alpha: 0.05);
+        border-radius: 1% 5%;
+        margin-bottom: 5px;
+      }
+    }
+    &--1,
+    &--2,
+    &--3 {
+      padding: 0 10px;
+      font-size: 0.6rem;
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 1s;
+    }
+
+    &--1.show,
+    &--2.show,
+    &--3.show {
+      max-height: 15vw;
+    }
+  }
+
+  .about__interests {
+    padding: 10px 0;
+    margin-top: 20px;
+    grid-area: interests;
+    font-family: $secondary-font;
+    font-size: $secondary-font-size;
+    p {
+      background-color: rgba($color: #655946, $alpha: 0.05);
+      border-radius: 1% 5%;
+      font-size: 0.6rem;
+      margin: 10px 10px;
+    }
+    &--1,
+    &--2,
+    &--3 {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 1s;
+    }
+
+    &--1.show,
+    &--2.show,
+    &--3.show {
+      max-height: 15vw;
+    }
+  }
+  .about__collapsible {
+    font-family: $primary-font;
+    border: none;
+    border-bottom: 1px solid $secondary-color;
+    width: 100%;
+    text-align: left;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "\02795";
+      color: $tertiary-color;
+      font-size: 8px;
+      float: right;
+    }
+  }
+}
+
+// CONTACT
+
+.contact {
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contact__header {
+    font-size: $primary-font-size;
+    margin: 30px 0;
+    padding: 5vh 0;
+  }
+
+  .contact__button {
+    padding: 1vw 5vw;
+    border-radius: 1% 5%;
+    font-family: $secondary-font;
+    font-size: 1.2rem;
+    border: 0.3px solid $tertiary-color;
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: $accent-color;
+      color: $tertiary-color;
+    }
+
+    &:active {
+      background-color: $secondary-color;
+      color: $accent-color;
+    }
+  }
+}
+.contact__form {
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  input[type="text"],
+  select,
+  textarea {
+    font-family: $primary-font;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid $tertiary-color;
+    border-radius: 1% 5%;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: none;
+  }
+
+  input[type="submit"] {
+    font-family: $secondary-font;
+    border: 1px solid $tertiary-color;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 1% 5%;
+    transition: background-color 1s;
+  }
+
+  input[type="submit"]:hover {
+    background-color: $accent-color;
+    color: $tertiary-color;
+  }
+}
+.contact__form.show {
+  max-height: 500px;
+}
+
+// FOOTER
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-color;
+  opacity: 70%;
+  height: 7vh;
+
+  .footer__link {
+    background: $primary-color;
+    border-radius: 10% 20%;
+    padding: 5px 5px 2px 5px;
+    margin: 2px;
+
+    &:hover {
+      opacity: 70%;
+    }
+  }
+
+  .footer__img {
+    background: none;
+    width: auto;
+    height: 20px;
+  }
+}

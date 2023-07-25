@@ -1,0 +1,41 @@
+@use "./variables" as *;
+
+// RANDOM STYLING CLASSES
+
+.half-box {
+  border-left: 3px solid $tertiary-color;
+  border-bottom: 2px solid $tertiary-color;
+  box-shadow: 0 0 $accent-color;
+  border-radius: 4px;
+  color: $tertiary-color;
+}
+
+.primary-underline {
+  text-decoration: underline;
+  text-decoration-color: $tertiary-color;
+}
+
+.flex-hr {
+  display: flex;
+  border: 1px solid $tertiary-color;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px $accent-color;
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.large-hr {
+  border: 1px solid $tertiary-color;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px $accent-color;
+  width: 50px;
+  margin: 20px 0 20px 0;
+}
+
+.small-hr {
+  border: 1px solid $tertiary-color;
+  border-radius: 5px 10px;
+  box-shadow: 0 1px $accent-color;
+  width: 25px;
+  margin: 10px 0;
+}
