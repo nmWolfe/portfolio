@@ -78,6 +78,10 @@
   .portfolio {
     .portfolio__header {
       font-size: $tertiary-font-size;
+      img {
+        position: relative;
+        top: 15px;
+      }
     }
 
     .portfolio__main {
@@ -152,6 +156,11 @@
   }
 
   .portfolio {
+    .portfolio__header {
+      img {
+        top: 20px;
+      }
+    }
     .portfolio__main {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas:
