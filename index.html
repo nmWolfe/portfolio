@@ -7,7 +7,7 @@
       name="description"
       content="Ignite your dreams with the help of a Junior Software Dev"
     />
-    <title>Nicholas Phelan</title>
+    <title>Nicholas Phelan - Jr. Software Dev</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
@@ -31,7 +31,7 @@
               class="nav__burger--img"
             />
           </button>
-          <div class="nav__dropdown--list" id="dropdownBurger">
+          <div class="nav__dropdown--list" id="dropdownBurger" onclick="toggleDropdown('dropdownBurger')">
             <ul>
               <li><a href="#about" class="nav__link">About</a></li>
               <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
@@ -153,9 +153,8 @@
                 <img
                   src="./assets/project_1.png"
                   alt="project 1"
-                  class="project__img--1"
+                  class="project__img--1" id="project-1"
                 />
-                <img src="./assets/project_1_code.png" alt="project 1 code" />
               </div>
               <div class="projects__box">
                 <div class="projects__box--top">
@@ -166,23 +165,24 @@
                         src="./assets/eye.svg"
                         alt="eye"
                         class="project__button--round"
+                        onclick="toggleProjectImg('project-1', './assets/project_1.png')"
                       />
                     </button>
                     <button class="project__button">
                       <img
                         src="./assets/code.svg"
                         alt="code"
-                        class="project__button--round"
+                        class="project__button--round" onclick="toggleProjectImg('project-1', './assets/project_1_code.png')"
                       />
                     </button>
                   </div>
                 </div>
                 <hr class="small-hr" />
                 <div class="projects__box--bottom">
-                  <button class="project__button project__button--rectangle">
+                  <button class="project__button project__button--rectangle" onclick="toggleProjectImg('project-1', './assets/project-1-scss.png')">
                     SCSS
                   </button>
-                  <button class="project__button project__button--rectangle">
+                  <button class="project__button project__button--rectangle" onclick="toggleProjectImg('project-1', './assets/project-1-js.png')">
                     JavaScript
                   </button>
                 </div>
@@ -445,27 +445,68 @@
             Tech_nology
           </button>
           <div class="about__interests--1" id="int-1">
-            <p>
-              I really really really really really really really like
-              technology.
-            </p>
+            <div class="about__sub-header">Machine Learning & AI</div>
+            <ul class="about__ul">
+              <li>- Exponential growth potential</li>
+              <li>- Betterment of human-life through automation</li>
+              <li>- Accessibility</li>
+            </ul>
+            <div class="about__sub-header">Full Stack development</div>
+            <ul class="about__ul">
+              <li>- Versatility</li>
+              <li>- Creative expression</li>
+              <li>- Continuous learning</li>
+            </ul>
+            <div class="about__sub-header">Innovation</div>
+            <ul class="about__ul">
+              <li>- Important for progression</li>
+              <li>- Exciting prospectively</li>
+            </ul>
           </div>
           <button class="about__collapsible" onclick="toggleDropdown('int-2')">
             Health & Fitness
           </button>
           <div class="about__interests--2" id="int-2">
-            <p>
-              I really really really really really really really like Health &
-              Fitness.
-            </p>
-          </div>
+            <div class="about__sub-header">Personal Benefits</div>
+            <ul class="about__ul">
+              <li>
+                - Cardiovascular fitness keeps my brain happy, and healthy
+              </li>
+              <li>- Pure motivation completing a long/difficult run or ride</li>
+              <li>- I sleep like the proverbial baby after a good work-out</li>
+            </ul>
+            <div class="about__sub-header">Running</div>
+            <ul class="about__ul">
+              <li>- Goal to run a half marathon completed in May</li>
+              <li>- Goal to run a full marathon - in progress</li>
+            </ul>
+            <div class="about__sub-header">Cycling</div>
+            <ul class="about__ul">
+              <li>- First ever fitness passion</li>
+              <li>- A ride a day keeps the doctor away&#153</li>
+              <li>- Look me up on Zwift and lets have a virtual ride!</li>
+            </ul>
+            </div>
           <button class="about__collapsible" onclick="toggleDropdown('int-3')">
             Music
           </button>
           <div class="about__interests--3" id="int-3">
-            <p>
-              I really really really really really really really like Music.
-            </p>
+            <div class="about__sub-header">Musical Taste</div>
+            <ul class="about__ul">
+              <li>- I think music makes the world go around</li>
+              <li>- Metal | Drum & Bass | Classical | Hip-Hop | World Music </li>
+              <li>- Reach out on Spotify, and let's connect!</li>
+            </ul>
+            <div class="about__sub-header">Guitar</div>
+            <ul class="about__ul">
+              <li>- Classical guitar is my first love</li>
+              <li>- Jazz guitar is my untamed beast</li>
+            </ul>
+            <div class="about__sub-header">Production</div>
+            <ul class="about__ul">
+              <li>- Produced various music using Ableton & Logic Pro </li>
+            </ul>
+            </div>
           </div>
         </div>
       </section>
