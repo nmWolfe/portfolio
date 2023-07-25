@@ -11,7 +11,7 @@ const toggleDropdown = (id_name) => {
 // of the portfolio view to code, or image.
 // Will possibly have to go deeper to switch language
 
-const toggleDisplay = (projectName) => {
-  let currentDisplay = document.getElementById(projectName);
-  currentDisplay.classList.toggle("switch");
+const toggleProjectImg = (imageId, switchId) => {
+  let currentDisplay = document.getElementById(imageId);
+  currentDisplay.src = switchId;
 };
