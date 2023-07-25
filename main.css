@@ -32,6 +32,10 @@ ul {
   list-style: none;
 }
 
+i {
+  background: none;
+}
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -82,6 +86,8 @@ ul {
   font-size: 10vw;
   text-align: left;
   margin-bottom: 20px;
+  word-spacing: 5px;
+  line-height: 190%;
 }
 .header .header__paragraph {
   font-size: 1.2rem;
@@ -141,7 +147,7 @@ ul {
   display: flex;
 }
 .portfolio .portfolio__header img {
-  width: 3vw;
+  width: 5vw;
   align-self: flex-end;
 }
 .portfolio .portfolio__main {
@@ -175,9 +181,6 @@ ul {
 }
 .projects .projects__img img {
   width: 100%;
-}
-.projects .projects__img img .projects__img--1 {
-  display: none;
 }
 .projects .projects__box {
   margin: 10px 0;
@@ -275,7 +278,7 @@ ul {
   transition: max-height 1s;
 }
 .about .about__experience--1.show, .about .about__experience--2.show, .about .about__experience--3.show {
-  max-height: 15vw;
+  max-height: 100vw;
 }
 .about .about__interests {
   padding: 10px 0;
@@ -284,19 +287,28 @@ ul {
   font-family: "Cormorant Upright", georgia;
   font-size: 5vw;
 }
-.about .about__interests p {
+.about .about__interests .about__sub-header {
+  color: #655946;
+  margin-bottom: 5px;
+}
+.about .about__interests .about__ul {
+  margin-left: 10px;
+  margin-top: 5px;
+}
+.about .about__interests .about__ul li {
   background-color: rgba(101, 89, 70, 0.05);
   border-radius: 1% 5%;
-  font-size: 0.6rem;
-  margin: 10px 10px;
+  margin-bottom: 5px;
 }
 .about .about__interests--1, .about .about__interests--2, .about .about__interests--3 {
+  padding: 0 10px;
+  font-size: 0.6rem;
   overflow: hidden;
   max-height: 0;
   transition: max-height 1s;
 }
 .about .about__interests--1.show, .about .about__interests--2.show, .about .about__interests--3.show {
-  max-height: 15vw;
+  max-height: 100vw;
 }
 .about .about__collapsible {
   font-family: "Cormorant Garamond", georgia;
@@ -464,6 +476,10 @@ ul {
   .portfolio .portfolio__header {
     font-size: 3vw;
   }
+  .portfolio .portfolio__header img {
+    position: relative;
+    top: 15px;
+  }
   .portfolio .portfolio__main {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "project1 project2" "project3 project4";
@@ -517,6 +533,9 @@ ul {
     padding: 40px;
     margin: 0 40px;
     font-family: "Cormorant Garamond", georgia;
+  }
+  .portfolio .portfolio__header img {
+    top: 20px;
   }
   .portfolio .portfolio__main {
     grid-template-columns: 1fr 1fr 1fr;
