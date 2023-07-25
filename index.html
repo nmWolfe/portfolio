@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ignite your dreams with the help of a Junior Software Dev"
+    />
     <title>Nicholas Phelan</title>
     <link rel="stylesheet" href="main.css" />
     <script src="script.js" defer></script>
@@ -17,15 +21,18 @@
           <span class="half-box">P</span
           ><span class="primary-underline">helan</span>
         </a>
-        <div class="dropdown">
-          <button class="nav__dropdown">
+        <div class="nav__dropdown">
+          <button
+            class="nav__dropdown--button"
+            onclick="toggleDropdown('dropdownBurger')"
+          >
             <img
               src="/assets/burger-menu-left.svg"
               alt="burger menu"
-              class="nav__burger"
+              class="nav__burger--img"
             />
           </button>
-          <div class="dropdown__burger">
+          <div class="nav__dropdown--list" id="dropdownBurger">
             <ul>
               <li><a href="#about" class="nav__link">About</a></li>
               <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
@@ -37,7 +44,10 @@
           <li><a href="#about" class="nav__link">About</a></li>
           <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
           <li>
-            <a href="#contact" class="nav__link" onclick="toggleForm()"
+            <a
+              href="#contact"
+              class="nav__link"
+              onclick="toggleDropdown('formDisplay')"
               >Contact</a
             >
           </li>
@@ -62,7 +72,7 @@
             that crafts elegant and efficient solutions that leave a lasting
             impact, <span class="primary-underline">Master P</span> is always at
             the forefront, fearlessly venturing into the uncharted territories
-            of the digital world.
+            of a digital world.
           </p>
         </div>
       </section>
@@ -140,10 +150,16 @@
         <div class="portfolio__main">
           <div class="portfolio__project">
             <div class="projects">
-              <div class="projects__img"></div>
+              <div class="projects__img">
+                <img
+                  src="/assets/project_1.png"
+                  alt="project 1"
+                  class="project__img--1"
+                />
+              </div>
               <div class="projects__box">
                 <div class="projects__box--top">
-                  <h3>Project 1</h3>
+                  <h3>Project 1 - Portfolio Website</h3>
                   <div>
                     <button class="project__button">
                       <img
@@ -390,21 +406,70 @@
           <h3><span class="half-box">E</span>xperience</h3>
           <hr class="small-hr" />
           <!-- Dropdown -->
-          <button class="collapsible">Trainee Software Dev @ _nology</button>
-          <button class="collapsible">IT Consultant @ SAIC Ltd</button>
-          <button class="collapsible">Owner @ SouthSide Charmers</button>
+          <button class="about__collapsible" onclick="toggleDropdown('exp-1')">
+            Trainee Software Dev @ _nology
+          </button>
+          <div class="about__experience--1" id="exp-1">
+            <div class="about__sub-header">Jul 2023 - Oct 2023</div>
+            <ul class="about__ul">
+              <li>- Full time hero</li>
+              <li>- Full time hero</li>
+            </ul>
+          </div>
+          <button class="about__collapsible" onclick="toggleDropdown('exp-2')">
+            IT Consultant @ SAIC Ltd
+          </button>
+          <div class="about__experience--2" id="exp-2">
+            <div class="about__sub-header">Jun 2022 - Jul 2023</div>
+            <ul class="about__ul">
+              <li>- Part time hero</li>
+              <li>- Part time hero</li>
+            </ul>
+          </div>
+          <button class="about__collapsible" onclick="toggleDropdown('exp-3')">
+            Sales Manager @ 99 Bikes
+          </button>
+          <div class="about__experience--3" id="exp-3">
+            <div class="about__sub-header">May 2021 - Dec 2022</div>
+            <ul class="about__ul">
+              <li>- Full time LEGEND</li>
+              <li>- Full time LEGEND</li>
+            </ul>
+          </div>
         </div>
         <div class="about__interests">
           <h3><span class="half-box">I</span>nterests</h3>
           <hr class="small-hr" />
           <!-- Dropdown -->
-          <button class="collapsible">Tech_nology</button>
-          <button class="collapsible">Health & Fitness</button>
-          <button class="collapsible">Music</button>
+          <button class="about__collapsible" onclick="toggleDropdown('int-1')">
+            Tech_nology
+          </button>
+          <div class="about__interests--1" id="int-1">
+            <p>
+              I really really really really really really really like
+              technology.
+            </p>
+          </div>
+          <button class="about__collapsible" onclick="toggleDropdown('int-2')">
+            Health & Fitness
+          </button>
+          <div class="about__interests--2" id="int-2">
+            <p>
+              I really really really really really really really like Health &
+              Fitness.
+            </p>
+          </div>
+          <button class="about__collapsible" onclick="toggleDropdown('int-3')">
+            Music
+          </button>
+          <div class="about__interests--3" id="int-3">
+            <p>
+              I really really really really really really really like Music.
+            </p>
+          </div>
         </div>
       </section>
       <!-- CONTACT SECTION -->
-      <!-- ********************************* Create a contact form  -->
       <section class="contact" id="contact">
         <div class="contact__header">
           <h1>
@@ -412,7 +477,9 @@
             <span class="half-box">O</span>ut
           </h1>
         </div>
-        <button class="contact__button" onclick="toggleForm()">Contact</button>
+        <button class="contact__button" onclick="toggleDropdown('formDisplay')">
+          Contact
+        </button>
         <div class="contact__form" id="formDisplay">
           <form action="#">
             <label for="name">Full Name</label>
@@ -461,11 +528,11 @@
           class="footer__img"
       /></a>
       <!-- need link to resume -->
-      <a href="#" class="footer__link"
-        ><img
-          src="/assets/academicons_cv.png"
-          alt="Curriculum Vitae"
-          class="footer__img"
+      <a
+        href="https://open.spotify.com/user/n.m.phelan?si=3276faefe42f44be"
+        target="_blank"
+        class="footer__link"
+        ><img src="/assets/spotify.svg" alt="spotify logo" class="footer__img"
       /></a>
     </footer>
   </body>
