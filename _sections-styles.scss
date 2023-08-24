@@ -238,6 +238,9 @@
   .about__paragraph {
     grid-area: paragraph;
     margin-bottom: 40px;
+    &--p {
+      font-size: 1.2rem;
+    }
   }
 
   .about__img {

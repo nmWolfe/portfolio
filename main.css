@@ -228,6 +228,9 @@ i {
   grid-area: paragraph;
   margin-bottom: 40px;
 }
+.about .about__paragraph--p {
+  font-size: 1.2rem;
+}
 .about .about__img {
   grid-area: img;
   margin-bottom: 20px;
@@ -559,7 +562,7 @@ i {
   }
   .about .about__paragraph {
     padding: 0 40px;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
   }
   .about .about__dropdowns {
     gap: 10px;
