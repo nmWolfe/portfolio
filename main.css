@@ -552,6 +552,11 @@ i {
   .skills {
     padding: 10px 40px;
     margin: 10px 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  .skills__header {
+    padding: 20px 0;
   }
   .about {
     grid-template-columns: 1fr 1fr 1fr 1fr;
