@@ -74,20 +74,11 @@
 .skills {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   padding: 10px 5px;
   .skills__header {
     font-size: 1rem;
     align-self: center;
     margin: 10px 0;
-  }
-
-  .skills__paragraph {
-    font-family: $primary-font;
-    font-size: $tertiary-font-size;
-    text-align: center;
-    padding: 5px 20px;
-    margin: 20px 0;
   }
 
   .skills__icons {
